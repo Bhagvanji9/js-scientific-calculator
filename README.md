@@ -1,6 +1,6 @@
 # Scientific-Calculator
 * This is my calculator and it's capable of solving mathematical equations involving logarithmic function, trigonometric functions ,factorials, inverse, square root etc.
-# ![Alt text](../Pictures/Screenshots/Screenshot%20from%202023-04-21%2013-57-16.png)
+![Screenshot from 2023-04-21 15-48-00](https://user-images.githubusercontent.com/124878578/233623340-44abaa64-9d23-40a1-bd31-ade7c134aa71.png)
 ## **Keys and it's use**
 * `0 to 9:`To add numerical value into inputbox
 * `(+,-,*,/):`Arithmetic operations
