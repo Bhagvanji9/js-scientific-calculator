@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+body{
+    width: auto;
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(246, 246, 246, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+.calc{
+    cursor: pointer;;
+}
+.container{
+    height: 630px;
+    width: 440px;
+    border: 1px solid rgb(192, 187, 187);
+    background-color: #ebe9e9;
+}
+.inputs{
+    border: 1px solid rgb(192, 187, 187);
+}
+.input-btn{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin-top: 9px;
+    margin-left: -1px;
+    
+}
+.display1 textarea, .display2 textarea{
+width: 420px;
+    height: 49.5px;
+    display:inline-block;
+    background-color: #cdcdcd;
+    resize: none;
+    border: none;
+    font-size: 1.3rem;
+    padding: 10px ;
+    color: black;
+    
+}
+.display1 textarea::-webkit-scrollbar,
+.display2 textarea::-webkit-scrollbar{
+    display: none;
+}
+.display2 textarea{
+    border-top: 1px solid #a5a4a4;
+}
+.memory{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    
+}
+.memoryfunc button{
+    width: 85px;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+     font-size: large;
+    border: none;
+}
+.buttons{
+    border: 1px solid rgb(185, 181, 181);
+    width: 85.7px;
+    height: 53.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.trigonomety{
+    width: 438px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+select option:hover {
+    background-color:blue;
+}
+select#Trigofunc{
+    border: none;
+    background:none;
+    font-size: large;
+    cursor: pointer;
+}
+.buttons img{
+    height: 15px;
+    width: 15px;
+}
+
+.buttons button *{
+    pointer-events: none;
+}
+
+
+#equal{
+    background-color: rgb(37, 149, 194);
+}
+#equal:active{
+    background-color: rgb(131, 208, 238);
+}
+.number button{
+    background-color: #ddd9d9;
+}
+.buttons sup{
+    font-size: 17px;
+}
+.buttons button{
+    height: 100%;
+    width: 100%;
+    font-weight: bolder;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    cursor: pointer;
+    
+}
+.buttons button:hover{
+    background-color: rgb(131, 208, 238);
+}
+.memoryfunc button:hover {
+    background-color: rgb(131, 208, 238);
+}
+.memoryfunc button:active {
+    background-color: rgb(69, 183, 228);
+}
+.buttons button:active {
+     background-color: #579ddf;
+}
