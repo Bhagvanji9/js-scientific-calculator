@@ -6,10 +6,10 @@
 * `(+,-,*,/):`Arithmetic operations
 * `n!:`to find factorial of number
 * ```(log,ln):```Logarithmic Operations	
-* `***√***:` Will give square root of number
-* `***1/x***:` Will give  inverse of a number
-* `***AC***:` All Clear
-* `**<** :` Delete last element of input box
+* `√:` Will give square root of number
+* `1/x:` Will give  inverse of a number
+* `AC:` All Clear
+* `< :` Delete last element of input box
 * `MS :` Store answer in memory
 * `M+,M-:` Add or subtract the current value to (or from) the stored value in the memory .
 * `MR :` Recall the current memory value.
