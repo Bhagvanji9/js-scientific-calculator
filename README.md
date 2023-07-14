@@ -6,7 +6,7 @@
 * `(+,-,*,/):`Arithmetic operations
 * `n!:`to find factorial of number
 * ```(log,ln):```Logarithmic Operations	
-* `***√***:` Will give square root of number
+* `√:` Will give square root of number
 * `***1/x***:` Will give  inverse of a number
 * `***AC***:` All Clear
 * `**<** :` Delete last element of input box

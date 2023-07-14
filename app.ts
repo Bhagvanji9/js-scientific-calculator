@@ -1,14 +1,14 @@
 (() => {
-  const display1 = document.querySelector(".display1 textarea");
-  const display2 = document.querySelector(".display2 textarea");
-  const inputbtn = document.querySelector(".inputs");
-  const memoryRecallAndClear = document.querySelectorAll(".blur button");
-  let lastclick;
-  let memoryVar = null;
-  const memoryFunc = ["M+", "M-", "MC", "MS", "MR"];
-  const oparators = ["+", "-", "*", "/"];
+  const display1 = document.querySelector(".display1 textarea") as HTMLTextAreaElement;
+  const display2 = document.querySelector(".display2 textarea") as HTMLTextAreaElement
+  const inputbtn = document.querySelector(".inputs")!;
+  const memoryRecallAndClear = document.querySelectorAll(".blur button") as NodeListOf<HTMLButtonElement>;
+  let lastclick : string;
+  let memoryVar:any;
+  const memoryFunc : string[] = ["M+", "M-", "MC", "MS", "MR"];
+  const oparators : string[] = ["+", "-", "*", "/"];
 
-  const valid = [
+  const valid:string[] = [
     "0",
     "1",
     "2",
@@ -28,7 +28,7 @@
     ".",
   ];
 
-  const trigno = [
+  const trigno:string[] = [
     "sin(",
     "cos(",
     "tan(",
@@ -50,9 +50,9 @@
   ];
 
   inputbtn.addEventListener("click", (e) => {
-    let clickedBtn = e.target.value;
+    let clickedBtn = (e.target as HTMLInputElement).value;
 
-    let display1Value = display1.value.slice(0, display1.value.length - 1);
+    let display1Value = (display1.value).slice(0, display1.value.length - 1);
 
     if (String(clickedBtn) !== "undefined") {
       switch (clickedBtn) {
@@ -95,15 +95,15 @@
           break;
       }
     }
-  });
+});
 
-  function enableOrDisable(btns, trueOrFalse) {
+  function enableOrDisable(btns :NodeListOf<HTMLButtonElement>, trueOrFalse:boolean) {
     btns.forEach((element) => {
       element.disabled = trueOrFalse;
     });
   }
 
-  function validateString(rawString) {
+  function validateString(rawString:any) {
     let validString = rawString
       .replaceAll("log", "Math.log10")
       .replaceAll("ln", "Math.log")
@@ -121,13 +121,13 @@
     return validString;
   }
 
-  function givePositive(rawString) {
-    let validString = rawString.replaceAll("|x|", "");
+  function givePositive(rawString:string) {
+    let validString = rawString.replace("|x|", "");
     validString = "Math.abs(" + validString + ")";
     return validString;
   }
 
-  function getFactorial(n) {
+  function getFactorial(n:number) {
     let answer = 1;
     if (n == 0 || n == 1) {
       return answer;
@@ -139,9 +139,9 @@
     }
   }
 
-  function memory(data) {
+  function memory(data:string) {
     let indexofEqual = display2.value.indexOf("=");
-    let ans = display2.value.substr(indexofEqual + 1);
+    let ans = display2.value.substring(indexofEqual + 1);
 
     switch (data) {
       case "MS":
@@ -167,7 +167,7 @@
   }
 
   function equalTo() {
-    let input, output;
+    let input:string, output:string;
     try {
       input = display1.value;
       replaceFactorial();
@@ -176,6 +176,7 @@
         output = eval(validString);
         display2.value = input + "=" + output;
         lastclick = display1.value;
+
         display1.value = "";
       } else {
         let indexofEqual = display2.value.indexOf("=");
@@ -189,7 +190,7 @@
   }
   function plusOrMinus() {
     if (display1.value != "" && display1.value[0] != "-") {
-      if (display1.value[0] != 0) {
+      if (+display1.value[0] != 0) {
         display1.value = "-(" + display1.value + ")";
       }
     } else if (display1.value[0] == "-") {
@@ -201,15 +202,15 @@
     }
   }
   function replaceFactorial() {
-    let index1, index2;
+    let index1: number, index2: number;
     while (display1.value.includes("!")) {
       let factorial = display1.value;
       index1 = display1.value.indexOf("!");
 
       if (factorial[index1 - 1] === ")") {
-        let bracketCount;
+        let bracketCount:number;
         let index3 = index1 - 1;
-        let index4;
+        let index4 :number = 0;
         for (let i = index1; i >= 0; i--) {
           bracketCount = 0;
           if (factorial[i] === ")") {
@@ -222,19 +223,21 @@
         }
         display1.value = display1.value.replace(
           display1.value.slice(index4 + 1, index3 + 1),
-          eval(ans1)
+          eval(display1.value.slice(index4 + 1, index3 + 1))
         );
       } else {
-        let i;
+        let i:number;
         for (i = index1; i >= 0; i--) {
           if (oparators.includes(factorial[i])) {
             break;
           }
         }
         index2 = i;
-        display1.value = display1.value.replaceAll(
-          display1.value.slice(index2 + 1, index1 + 1),
-          BigInt(getFactorial(display1.value.slice(index2 + 1, index1)))
+        let bigNumber = String(getFactorial(+display1.value.slice(index2 + 1, index1))) ;
+      
+        display1.value = display1.value.replace(
+          display1.value.slice(index2 + 1, index1 + 1) ,
+          String(BigInt(bigNumber))
         );
       }
     }

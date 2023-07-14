@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,76 +9,80 @@
     <link rel="icon" type="image/x-icon" href="/images/calculation.png">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="clac">
         <div class="container">
-        <div class="display">
-            <div class="display1"><textarea disabled name="" id="" cols="30" rows="15"></textarea></div>
-            <div class="display2"><textarea disabled name="" id="" cols="30" rows="10"></textarea></div>
-        </div>
-        <div class="inputs">
-            <div class="memory">
-                <div class="memoryfunc blur"><button disabled value="MC">MC</button></div>
-                <div class="memoryfunc blur"><button disabled value="MR">MR</button></div>
-                <div class="memoryfunc"><button value="M+">M+</button></div>
-                <div class="memoryfunc"><button value="M-">M-</button></div>
-                <div class="memoryfunc"><button value="MS">MS</button></div>
+            <div class="display">
+                <div class="display1"><textarea disabled name="" id="" cols="30" rows="15"></textarea></div>
+                <div class="display2"><textarea disabled name="" id="" cols="30" rows="10"></textarea></div>
             </div>
-            <div class="trigonomety">
-                <label for="Trigonometry">Trigonometry:</label>
-                <select id="Trigofunc">
-                    <option  value="" hidden></option>
-                    <option class="opt" value="sin("><button>sin</button></option>
-                    <option class="opt" value="cos("><button>cos</button></option>
-                    <option class="opt" value="tan("><button>tan</button></option>
-                    <option class="opt" value="sin-1("><button>sin<sup>-1</sup></button></option>
-                    <option class="opt" value="cos-1("><button>cos<sup>-1</sup></button></option>
-                    <option class="opt" value="tan-1("><button>tan<sup>-1</sup></button></option>     
-                </select>
+            <div class="inputs">
+                <div class="memory">
+                    <div class="memoryfunc blur"><button disabled value="MC">MC</button></div>
+                    <div class="memoryfunc blur"><button disabled value="MR">MR</button></div>
+                    <div class="memoryfunc"><button value="M+">M+</button></div>
+                    <div class="memoryfunc"><button value="M-">M-</button></div>
+                    <div class="memoryfunc"><button value="MS">MS</button></div>
+                </div>
+                <div class="trigonomety">
+                    <label for="Trigonometry">Trigonometry:</label>
+                    <select id="Trigofunc">
+                        <option value="" hidden></option>
+                        <option class="opt" value="sin("><button>sin</button></option>
+                        <option class="opt" value="cos("><button>cos</button></option>
+                        <option class="opt" value="tan("><button>tan</button></option>
+                        <option class="opt" value="sin-1("><button>sin<sup>-1</sup></button></option>
+                        <option class="opt" value="cos-1("><button>cos<sup>-1</sup></button></option>
+                        <option class="opt" value="tan-1("><button>tan<sup>-1</sup></button></option>
+                    </select>
 
-            </div>
+                </div>
 
-            <div class="input-btn">
-                <div class="buttons ac"><button value="ac">AC</button></div>
-                <div class="buttons back"><button value="back"><</button></div>
-               <div class="buttons"><button value="π">π</button> </div>
-               <div class="buttons"><button value="e">e</button></div>
-               <div class="buttons"><button value="C">Prev</button></div>
-               <div class="buttons"><button value="^2"><span>X<sup>2</sup></span></button> </div>
-               <div class="buttons"><button value="1/">1/X</button> </div>
-               <div class="buttons"><button value="|x|">|X|</button> </div>
-               <div class="buttons"><button value="e^">exp</button></div>
-               <div class="buttons"><button value="mod">mod</button></div>
-               <div class="buttons"><button value="√(">√</button></div>
-               <div class="buttons"><button value="(">(</button></div>
-               <div class="buttons"><button value=")">)</button></div>
-               <div class="buttons"><button value="!">n!</button> </div>
-               <div class="buttons"><button value="/">/</button></div>
-               <div class="buttons"><button value="^"><span>X<sup>y</sup></span></button> </div>
-               <div class="buttons number"><button value="7">7</button></div>
-               <div class="buttons number"><button value="8">8</button></div>
-               <div class="buttons number"><button value="9">9</button></div>
-               <div class="buttons"><button value="*">*</button></div>
-               <div class="buttons"><button value="10^"><span>10<sup>x</sup></span></button></div>
-               <div class="buttons number"><button value="4">4</button></div>
-               <div class="buttons number"><button value="5">5</button></div>
-               <div class="buttons number"><button value="6">6</button></div>
-               <div class="buttons"><button value="-">-</button></div>
-               <div class="buttons"><button value="log(">log</button></div>
-               <div class="buttons number"><button value="1">1</button></div>
-               <div class="buttons number"><button value="2">2</button></div>
-               <div class="buttons number"><button value="3">3</button></div>
-               <div class="buttons"><button value="+">+</button></div>
-               <div class="buttons"><button value="ln(">ln</button></div>
-               <div class="buttons number"><button value="+/-">+/-</button></div>
-               <div class="buttons number"><button value="0">0</button></div>
-               <div class="buttons number"><button value=".">.</button> </div>
-               <div class="buttons equal"><button id="equal" value="=">=</button> </div>
+                <div class="input-btn">
+                    <div class="buttons ac"><button value="ac">AC</button></div>
+                    <div class="buttons back"><button value="back">
+                            < </button>
+                    </div>
+                    <div class="buttons"><button value="π">π</button> </div>
+                    <div class="buttons"><button value="e">e</button></div>
+                    <div class="buttons"><button value="C">Prev</button></div>
+                    <div class="buttons"><button value="^2"><span>X<sup>2</sup></span></button> </div>
+                    <div class="buttons"><button value="1/">1/X</button> </div>
+                    <div class="buttons"><button value="|x|">|X|</button> </div>
+                    <div class="buttons"><button value="e^">exp</button></div>
+                    <div class="buttons"><button value="mod">mod</button></div>
+                    <div class="buttons"><button value="√(">√</button></div>
+                    <div class="buttons"><button value="(">(</button></div>
+                    <div class="buttons"><button value=")">)</button></div>
+                    <div class="buttons"><button value="!">n!</button> </div>
+                    <div class="buttons"><button value="/">/</button></div>
+                    <div class="buttons"><button value="^"><span>X<sup>y</sup></span></button> </div>
+                    <div class="buttons number"><button value="7">7</button></div>
+                    <div class="buttons number"><button value="8">8</button></div>
+                    <div class="buttons number"><button value="9">9</button></div>
+                    <div class="buttons"><button value="*">*</button></div>
+                    <div class="buttons"><button value="10^"><span>10<sup>x</sup></span></button></div>
+                    <div class="buttons number"><button value="4">4</button></div>
+                    <div class="buttons number"><button value="5">5</button></div>
+                    <div class="buttons number"><button value="6">6</button></div>
+                    <div class="buttons"><button value="-">-</button></div>
+                    <div class="buttons"><button value="log(">log</button></div>
+                    <div class="buttons number"><button value="1">1</button></div>
+                    <div class="buttons number"><button value="2">2</button></div>
+                    <div class="buttons number"><button value="3">3</button></div>
+                    <div class="buttons"><button value="+">+</button></div>
+                    <div class="buttons"><button value="ln(">ln</button></div>
+                    <div class="buttons number"><button value="+/-">+/-</button></div>
+                    <div class="buttons number"><button value="0">0</button></div>
+                    <div class="buttons number"><button value=".">.</button> </div>
+                    <div class="buttons equal"><button id="equal" value="=">=</button> </div>
+                </div>
             </div>
         </div>
     </div>
-  </div>
-</div>
-   <script src="./main.js"></script>
+    </div>
+    <script src="./app.js"></script>
 </body>
+
 </html>
